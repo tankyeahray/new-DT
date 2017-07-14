@@ -8,9 +8,10 @@ const config = {
   // 分离 应用程序(app) 和 第三方库(vendor) 入口
   entry: {
     app: './src/app.js'
+
   },
   output: {
-    filename: 'js/[name]-[chunkhash].js',
+    filename: 'js/[name]-[hash].js',
     path: path.resolve(__dirname, './dist'),
   },
   // 配置loader加载规则
@@ -63,7 +64,8 @@ const config = {
       template: './src/app.html'
     }),
 
-    new webpack.SourceMapDevToolPlugin()
+    new webpack.SourceMapDevToolPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
 
   // 配置别名
@@ -72,6 +74,13 @@ const config = {
       // 不加入别名会引入vue.common.js导致编译错误
       'vue': 'vue/dist/vue.js'
     }
+  },
+
+  devServer: {
+    inline: true,
+    hot: true,
+    contentBase: path.resolve(__dirname, './dist'),
+    publicPath: '/'
   },
 
   // 开启source-map

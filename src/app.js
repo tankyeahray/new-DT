@@ -5,8 +5,8 @@ import axios from 'axios';
 import routes from './routers/routers.js';
 
 // Element-UI
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-default/index.css';
 
 import App from './app.vue';
 
