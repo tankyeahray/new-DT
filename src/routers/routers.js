@@ -1,15 +1,17 @@
-export default {
+import index from '../pages/index.vue';
+import error from '../pages/error.vue';
 
+export default {
   routes: [
     {
       path: '/',
-      name: 'app',
-      component: require('../pages/index.vue')
+      name: 'name',
+      component: index
     },
     {
       path: '*',
-      component: {template: 'not found'}
+      name: 'default',
+      component: error
     }
   ]
-
 }
