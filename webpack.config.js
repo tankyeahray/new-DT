@@ -7,8 +7,9 @@ const config = {
 
   // 分离 应用程序(app) 和 第三方库(vendor) 入口
   entry: {
-    app: './src/app.js'
-
+    app: './src/app.js',
+    vues: ['vue', 'vuex', 'vue-router', 'axios'],
+    ElementUI: 'element-ui'
   },
   output: {
     filename: 'js/[name]-[hash].js',
@@ -62,6 +63,14 @@ const config = {
     // 文件模板，配置多个html文件可以new多个
     new HtmlWebpackPlugin({
       template: './src/app.html'
+    }),
+
+    // 抽离CSS
+    new ExtractTextPlugin("[name].css"),
+
+    // 分离第三方库
+    new webpack.optimize.CommonsChunkPlugin({
+        name:['app', 'vues', 'ElementUI']
     }),
 
     new webpack.SourceMapDevToolPlugin(),

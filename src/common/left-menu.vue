@@ -15,6 +15,9 @@
           label: '表格'
         },
         {
+          label: '跑马灯'
+        },
+        {
           label: '一级 1',
           children: [{
             label: '二级 1-1',
@@ -38,6 +41,9 @@
             break;
           case '表格':
             this.$router.replace('/table');
+            break;
+          case '跑马灯':
+            this.$router.replace('/carousel');
             break;
           default:
             this.$router.replace('/index');
