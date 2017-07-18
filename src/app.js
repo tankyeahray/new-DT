@@ -19,10 +19,12 @@ Vue.use(ElementUI);
 const router = new VueRouter(routes);
 const store = new Vuex.Store(modules);
 
-new Vue({
+const vm = new Vue({
   el: '#app',
   router,
   store,
   template: '<App/>',
   components: { App }
 });
+
+export default vm;
