@@ -52,7 +52,7 @@ export default {
 <style lang="less">
   html, body{
     height: 100%;
-    margin: 0;
+    margin: 0;es
     padding: 0;
   }
   #app{

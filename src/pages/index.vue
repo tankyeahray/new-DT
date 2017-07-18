@@ -7,7 +7,7 @@
     <div class="msg">{{ txt }}</div>
     <el-button type="primary" @click="reverse()">翻转文字</el-button>
   </div>
-
+    
 </template>
 
 <script>
