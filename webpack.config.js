@@ -70,9 +70,13 @@ const config = {
     // 抽离CSS
     new ExtractTextPlugin('[name].css'),
 
+    // 开启SourceMap调试
     new webpack.SourceMapDevToolPlugin(),
+
+    // 开启HotModuleReload
     new webpack.HotModuleReplacementPlugin(),
 
+    // 开启DLL静态资源预加载
     new webpack.DllReferencePlugin({
       context: __dirname,
       manifest: VendorManifest
