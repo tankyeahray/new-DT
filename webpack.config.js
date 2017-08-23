@@ -10,6 +10,7 @@ const config = {
 
   // 分离 应用程序(app) 和 第三方库(vendor) 入口
   entry: {
+    app: './src/app.js',
     build: ['vue', 'vuex', 'axios', 'vue-router', 'element-ui']
   },
   output: {
