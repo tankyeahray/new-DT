@@ -90,7 +90,7 @@ const config = {
     // 删除每次编译后生成的文件
     new CleanWebpackPlugin(
       // 匹配删除的文件
-      ['dist/js/*.js', 'dist/*.ttf'],
+      ['/dist'],
       {
         // 根目录
         root: __dirname,
